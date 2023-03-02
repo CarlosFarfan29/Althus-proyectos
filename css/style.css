@@ -1,0 +1,360 @@
+@import url(//db.onlinewebfonts.com/c/1770f2701d6a1869d956cd8eeda33a7d?family=Morganite);
+@import url(//db.onlinewebfonts.com/c/d1621c0a2695c84cf82717e2e4de78c3?family=Helvetica+LT+Std);
+
+body{
+  background: #282927;
+  font-family: 'Morganite';
+}
+
+a:hover{text-decoration: none;}
+
+/* HEADER */
+#header a img{
+  width: 9.2rem;
+}
+
+header .banner{
+  background-image: url(../img/proyecto-fondo-1.png);
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+header .man-banner{
+  background-image: url(../img/Home-hombre-1.png);
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+header .text-banner{
+  text-transform: uppercase;
+  font-size: 98px;
+  color: #5819DC;
+  line-height: 0.9;
+}
+
+header .text-banner span{
+  display: block;
+  color: #282927;
+}
+
+main .title{
+  font-size: 98px;
+  letter-spacing: 2;
+}
+
+main nav a{
+  font-size: 3.5em;
+  color: #5819dc;
+  text-align: center;
+  margin: 0 10px;
+  line-height: 1;
+}
+
+main nav a:hover{
+  color: #fff;
+}
+
+main nav a:nth-child(1){
+  color: #fff;
+}
+
+main .img-galery{
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  height: 445px;
+}
+
+main .img-galery img{
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: .5s all ease; 
+}
+
+main .img-galery:hover > .card-text{
+  opacity: 1;
+  visibility: visible;
+}
+
+main .img-galery:hover > img{
+  filter: grayscale(0%);
+  transform: scale(1.15);
+}
+
+main .img-galery .card-text{
+  background-color: rgba(0,0,0,.87);
+  width: 100%;
+  bottom: 0%;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+main .card-description .name{
+  color: #fff;
+  font-size: 2.8em;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  margin-top: 7px;
+}
+
+main .card-description .category{
+  font-size: .9em;
+  color: #5819DC;
+  font-family: "Helvetica LT Std";
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+main .card-text a{
+  top: 1em;
+  text-align: center;
+}
+
+main .card-text i{
+  color: #5819dc;
+  font-size: 27px;
+  
+}
+
+footer{
+  border-top: 1px solid rgba(255,255,255,0.39);
+}
+
+footer .text-footer{
+  padding: 27px 0;
+}
+
+footer .text-footer p{
+  color: #fff;
+  font-family: "Open Sans",Arial,sans-serif;
+  font-size: 17px;
+  margin: 0;
+}
+
+.toggler {
+  position: fixed;
+  display: block;
+  height: 30px;
+  width: 40px;
+  top: 75px;
+  right: 50px;
+  z-index: 999999;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hamburger{
+  position: fixed;
+  right: 40px;
+  top: 60px;
+  height: 60px;
+  width: 60px;
+  padding: 0rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger > div{
+  position: relative;
+  top: 0;
+  left: 0;
+  background: rgb(255, 255, 255);
+  height: 2px;
+  width: 60%;
+  transition: all  0.4s ease;
+}
+
+.hamburger > div::before,
+.hamburger > div::after{
+  content: '';
+  position: absolute;
+  top: -10px;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 2px;
+  transition: all  0.4s ease;
+}
+
+.hamburger > div::after{
+  top: 10px;
+}
+
+.toggler:checked + .hamburger > div{
+  background: rgba(0,0,0,0);
+}
+
+.toggler:checked + .hamburger > div::before{
+  top: 0;
+  transform: rotate(45deg);
+  background: rgb(255, 255, 255);
+}
+
+.toggler:checked + .hamburger > div::after{
+  top: 0;
+  transform: rotate(135deg);
+  background: rgb(255, 255, 255);
+}
+
+.menu{
+  background: rgb(0, 0, 0, 0.9);
+  width: 0%;
+  height: 100vh;
+  position: fixed;
+  font-family: "Morganite";
+  right: 0px;
+  z-index: 9998;
+  transition: all 0.4s ease;
+}
+
+.toggler:checked ~ .menu{
+  width: 38%;
+}
+
+.menu >  div > ul{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  padding-left: 30px;
+  line-height: 4rem;
+  visibility: hidden;
+}
+
+.menu > div > ul > li{
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.menu > div > ul > li > a{
+  color: white;
+  text-decoration: none;
+  font-size: 4rem;
+  font-family: "Morganite";
+}
+
+.toggler:checked ~ .menu > div > ul{
+  transition: visibility 0.4s ease;
+  transition-delay: 0.1s;
+  visibility: visible;
+}
+
+.toggler:checked ~ .menu > div > ul > li > a:hover{
+  color:#6612E2;
+}
+
+/* Redes-Sociales */
+
+.redes-sociales{
+  position: fixed;
+  top: 150px;
+  right: 55px;
+  z-index: 99999;
+}
+
+.redes-sociales ul li{
+  text-decoration: none;
+  list-style: none;
+  padding: .5rem 0;
+}
+
+.redes-sociales ul li a i{
+  color: white;
+  font-size: 1.8rem;
+  transition: all .25s ease-in;
+}
+
+.fa-facebook-f:hover{
+  color: #3b5998;
+  transition: all .25s ease-out;
+}
+
+.fa-instagram:hover{
+  color: #df3db6;
+}
+
+.fa-linkedin-in:hover{
+  color: #0e76a8;
+}
+
+/* emociones */
+.imagen-emociones{
+  position: fixed;
+  top: 42px;
+  right: 23px;
+  z-index: 9999;
+}
+
+.imagen-emociones img{
+  width: 6rem;
+}
+
+@keyframes rotate {from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(360deg);}}
+
+.imagen-emociones{
+  -webkit-animation: 3s rotate linear infinite;
+  animation: 7s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+/* DISPOSITIVO MD */
+@media screen and (max-width: 767px){
+  main nav a{
+    font-size: 40px; 
+  }
+
+  header .man-banner{
+    background-size: cover;
+  }
+
+  main nav{
+    justify-content: center;
+  }
+
+  header .text-banner{
+    font-size: 80px;
+    margin: 0;
+  }
+}
+
+/* DISPOSITIVO MD */
+@media screen and (max-width: 767px){
+  header .text-banner{
+    font-size: 60px;
+  }
+  .toggler:checked ~ .menu{
+    width: 100%;
+  }
+
+  .menu{
+    height: 110vh;
+  }
+
+ 
+}
+
+/* DISPOSITIVO SM */
+@media screen and (max-width: 575px){
+  header .text-banner{
+    font-size: 45px;
+    
+  }
+
+}
