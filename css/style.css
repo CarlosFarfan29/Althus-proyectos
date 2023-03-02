@@ -1,9 +1,5 @@
-@import url(//db.onlinewebfonts.com/c/1770f2701d6a1869d956cd8eeda33a7d?family=Morganite);
-@import url(//db.onlinewebfonts.com/c/d1621c0a2695c84cf82717e2e4de78c3?family=Helvetica+LT+Std);
-
 body{
   background: #282927;
-  font-family: 'Morganite';
 }
 
 a:hover{text-decoration: none;}
@@ -31,27 +27,36 @@ header .man-banner{
 
 header .text-banner{
   text-transform: uppercase;
-  font-size: 98px;
+  font-size: 72px;
   color: #5819DC;
-  line-height: 0.9;
+  line-height: 1.1;
+  padding-top: 15px;
+  font-weight: 600;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: -5px;
 }
 
 header .text-banner span{
   display: block;
   color: #282927;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 main .title{
-  font-size: 98px;
-  letter-spacing: 2;
+  font-size: 70px;
+  font-weight: 600;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: -3px;
 }
 
 main nav a{
-  font-size: 3.5em;
+  font-size: 2.4em;
   color: #5819dc;
   text-align: center;
   margin: 0 10px;
-  line-height: 1;
+  line-height: 1.2;
+  letter-spacing: -3px;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 main nav a:hover{
@@ -96,22 +101,30 @@ main .img-galery .card-text{
   position: absolute;
   opacity: 0;
   visibility: hidden;
+  padding: 5px 12px;
+}
+
+main .card-description{
+  padding: 0;
 }
 
 main .card-description .name{
   color: #fff;
-  font-size: 2.8em;
-  letter-spacing: 1.7px;
+  font-size: 1.9em;
+  letter-spacing: 0px;
   text-transform: uppercase;
   margin: 0;
-  line-height: 1;
+  line-height: 1.4;
   margin-top: 7px;
+  font-weight: bold;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 main .card-description .category{
-  font-size: .9em;
+  font-size: .92em;
+  letter-spacing: -1px;
   color: #5819DC;
-  font-family: "Helvetica LT Std";
+  font-family: "Open Sans", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 7px;
@@ -120,12 +133,13 @@ main .card-description .category{
 main .card-text a{
   top: 1em;
   text-align: center;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 main .card-text i{
   color: #5819dc;
-  font-size: 27px;
-  
+  font-size: 50px;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 footer{
@@ -138,9 +152,10 @@ footer .text-footer{
 
 footer .text-footer p{
   color: #fff;
-  font-family: "Open Sans",Arial,sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 17px;
   margin: 0;
+  letter-spacing: 0px;
 }
 
 .toggler {
@@ -314,10 +329,18 @@ to {-webkit-transform: rotate(360deg);}}
   transform-origin: 50% 50%;
 }
 
+@media screen and (max-width: 991px){
+  header .text-banner{
+    font-size: 60px;
+    margin: 0;
+  }
+}
+
 /* DISPOSITIVO MD */
 @media screen and (max-width: 767px){
   main nav a{
-    font-size: 40px; 
+    font-size: 35px; 
+    letter-spacing: -2px;
   }
 
   header .man-banner{
@@ -329,16 +352,10 @@ to {-webkit-transform: rotate(360deg);}}
   }
 
   header .text-banner{
-    font-size: 80px;
+    font-size: 50px;
     margin: 0;
   }
-}
 
-/* DISPOSITIVO MD */
-@media screen and (max-width: 767px){
-  header .text-banner{
-    font-size: 60px;
-  }
   .toggler:checked ~ .menu{
     width: 100%;
   }
@@ -347,14 +364,30 @@ to {-webkit-transform: rotate(360deg);}}
     height: 110vh;
   }
 
- 
+  main .title{
+    font-size: 60px;
+  }
 }
+
 
 /* DISPOSITIVO SM */
 @media screen and (max-width: 575px){
   header .text-banner{
-    font-size: 45px;
-    
+    font-size: 33px;
+    letter-spacing: -3px;
+  }
+
+  main .title{
+    font-size: 48px;
+  }
+
+  main nav a{
+    font-size: 30px; 
+    letter-spacing: -1px;
+  }
+
+  footer .text-footer p{
+    font-size: 14px;
   }
 
 }
